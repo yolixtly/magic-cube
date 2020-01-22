@@ -1,4 +1,4 @@
-@highlight: #de1d7f;
+@highlight: #3642eb;
 @select: green;
 @gray-darker: #444444;
 @gray-dark: #696969;
@@ -111,7 +111,7 @@ header {
     background-color: white;
     border: 1px solid @gray-light;
     color: @gray-dark;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     padding: 0.5rem;
     outline: none;
 }
@@ -125,6 +125,42 @@ input {
         background-color: @select;
         color: @gray-lighter;
     }
+}
+
+#donation-container {
+    height: 5rem;
+}
+.progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
+
+    width: 250px;
+    height: 20px;
+
+    position: relative;
+    display: block;
+}
+progress {
+    width: 100%;
+    border-radius: 1px;
+    color: @highlight;
+}
+progress::-webkit-progress-bar {
+    border: 1px solid @gray-light;
+    background-color: white;
+}
+progress::-webkit-progress-value {
+    background: @highlight;
+}
+progress::-moz-progress-bar {
+    background: @highlight;
+}
+.progress-bar > span {
+    background-color: @highlight;
+
+    display: block;
+    text-indent: -9999px;
 }
 
 .footer {

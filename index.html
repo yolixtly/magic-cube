@@ -16,7 +16,13 @@
                 <div class="card__image card__image--logo"></div>
                 <div class="card__title"><span>Only 5 days left</span> to fund this project</div>
                 <div class="card-body">
-                    <div>Progress Bar goes here</div>
+                    <div id="donation-container">
+                        <progress max="100" value="80">
+                            <div class="progress-bar">
+                                <span style="width: 80%;">Progress: 80%</span>
+                            </div>
+                        </progress>
+                    </div>
                     <div class="card-submit">
                         <input class="card_item" type="number" placeholder="$" />
                         <button class="card_item btn">Donate Now</button>
