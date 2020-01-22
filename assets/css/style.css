@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+    margin: auto; /* Remove margins */
+
+    /* border: 1px solid red; */
+}
+header {
+    text-align: center;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+.item {
+    width: 75%; /* Or whatever */
+    margin: auto; /* Magic! */
+}
+
+.footer {
+    flex-shrink: 0;
+    /* border: 1px solid blue; */
+}
+.flex-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    list-style: none;
+}
+
+.flex-item {
+    padding: 5px;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+}
