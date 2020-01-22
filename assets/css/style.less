@@ -1,24 +1,41 @@
+@highlight: #de1d7f;
+@select: green;
+@gray-darker: #444444;
+@gray-dark: #696969;
+@gray: #999999;
+@gray-light: #cccccc;
+@gray-lighter: #ececec;
+@gray-lightest: lighten(@gray-lighter, 4%);
+
 html {
     height: 100%;
 }
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-    margin: auto; /* Remove margins */
+    height: 100vh;
+    margin: auto;
 
-    /* border: 1px solid red; */
+    color: @gray;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 header {
+    color: @gray-darker;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 1.25rem;
     text-align: center;
 }
 
 .content {
     flex: 1 0 auto;
-}
-.item {
-    width: 75%; /* Or whatever */
-    margin: auto; /* Magic! */
 }
 
 .card {
@@ -44,12 +61,74 @@ header {
             filter: contrast(100%);
         }
     }
-    border: solid 1px gray;
+}
+.card-body {
+    padding: 1rem;
+}
+
+.card__image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    filter: contrast(70%);
+    //filter: saturate(180%);
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 56.25%; // 16:9 aspect ratio
+    }
+    @media (min-width: 40rem) {
+        &::before {
+            padding-top: 66.6%; // 3:2 aspect ratio
+        }
+    }
+}
+
+.card__image--logo {
+    background-image: url(../images/magic-cube.jpg);
+}
+
+.card__title {
+    color: @gray-dark;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    span {
+        color: @highlight;
+    }
+}
+
+.card-submit {
+    display: flex;
+}
+.card_item {
+    background-color: white;
+    border: 1px solid @gray-light;
+    color: @gray-dark;
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    outline: none;
+}
+input {
+    width: 30%;
+    margin-right: 0.5rem;
+}
+.btn {
+    width: 70%;
+    &:hover {
+        background-color: @select;
+        color: @gray-lighter;
+    }
 }
 
 .footer {
     flex-shrink: 0;
-    /* border: 1px solid blue; */
 }
 .flex-container {
     display: -webkit-box;
@@ -60,7 +139,6 @@ header {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     justify-content: space-around;
-
     list-style: none;
 }
 
