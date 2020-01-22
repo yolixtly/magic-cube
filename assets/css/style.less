@@ -121,6 +121,8 @@ input {
 }
 .btn {
     width: 70%;
+    text-decoration: none;
+    text-align: center;
     &:hover {
         background-color: @select;
         color: @gray-lighter;
@@ -130,12 +132,13 @@ input {
 #donation-container {
     height: 5rem;
 }
+
 .progress-bar {
     background-color: whiteSmoke;
     border-radius: 2px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25) inset;
 
-    width: 250px;
+    width: 100%;
     height: 20px;
 
     position: relative;
@@ -183,4 +186,70 @@ progress::-moz-progress-bar {
     width: 200px;
     font-weight: bold;
     text-align: center;
+}
+
+.modal-window {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.25);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    & > div {
+        text-align: center;
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background: #ffffff;
+    }
+    header {
+        font-weight: bold;
+    }
+    h1 {
+        font-size: 150%;
+        margin: 0 0 15px;
+    }
+}
+
+.modal-close {
+    color: #aaa;
+    line-height: 50px;
+    font-size: 80%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 70px;
+    text-decoration: none;
+    &:hover {
+        color: black;
+    }
+}
+
+#message-modal {
+    color: @gray-dark;
+    span {
+        font-weight: bold;
+    }
+}
+
+#button-wrapper {
+    padding-top: 2rem;
+    justify-content: space-evenly;
+    a {
+        width: 5rem;
+    }
 }
