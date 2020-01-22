@@ -17,16 +17,34 @@
                 <div class="card__title"><span>Only 5 days left</span> to fund this project</div>
                 <div class="card-body">
                     <div id="donation-container">
-                        <progress max="100" value="80">
+                        <progress id="progBar">
                             <div class="progress-bar">
-                                <span style="width: 80%;">Progress: 80%</span>
+                                <span>Progress</span>
                             </div>
                         </progress>
                     </div>
                     <div class="card-submit">
-                        <input class="card_item" type="number" placeholder="$" />
-                        <button class="card_item btn">Donate Now</button>
+                        <input id="amount" class="card_item" type="number" placeholder="$" />
+                        <a id="donate" class="card_item btn" href="#">Donate Now</a>
                     </div>
+                </div>
+            </div>
+
+            <!--Modal-->
+            <div id="confirm-modal" class="modal-window">
+                <div>
+                    <a href="#" title="Close" class="modal-close">Close</a>
+                    <div id="message-modal">Are you sure you want to donate <span></span></div>
+                    <div id="button-wrapper" class="card-submit">
+                        <a class="card_item btn" href="#">Yes</a>
+                        <a class="card_item btn" href="#">No</a>
+                    </div>
+                </div>
+            </div>
+            <div id="invalid-modal" class="modal-window">
+                <div>
+                    <a href="#" title="Close" class="modal-close">Close</a>
+                    <div id="message-modal">Please enter a valid Amount to Donate</div>
                 </div>
             </div>
         </div>
@@ -37,5 +55,7 @@
                 <li class="flex-item">Denver Weather</li>
             </ul>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./assets/js/donate.js"></script>
     </body>
 </html>
