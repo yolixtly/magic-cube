@@ -22,7 +22,7 @@ $("document").ready(() => {
 
         // Update Donor Count
         const updateDonors = init ? donors : donors + 1;
-        $('#donorCount').text(() => {
+        $('span.donorCount').text(() => {
             return updateDonors;
         });
         donationState = Object.assign(
@@ -66,6 +66,9 @@ $("document").ready(() => {
         const updateRaised = JSON.parse(donationState.raised) + JSON.parse(amount);
 
         updateProgress(updateRaised);
+
+        // Clean up Amount Input
+        $('#amount').val('');
 
         // Display Amount left to complete Raise
         $('span.tool').addClass('show');

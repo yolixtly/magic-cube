@@ -40,28 +40,56 @@
             <!--SECTION 2 Accordion-->
             <div class="card">
                 <button class="accordion">More Info</button>
-                <div class="panel">
+                <div class="panel pan-acc">
                     <p>
-                        Join the <span id="donorCount">26</span> donors who have already supported this
+                        Join the <span class="donorCount">26</span> donors who have already supported this
                         project.Every dollar helps!
                     </p>
                 </div>
 
                 <button class="accordion">Average Donation</button>
-                <div class="panel">
+                <div class="panel pan-acc">
                     <p>
                         Average Donation is $35
                     </p>
                 </div>
 
                 <button class="accordion">Highest Donation</button>
-                <div class="panel">
+                <div class="panel pan-acc">
                     <p>
                         Highest Donation is $24
                     </p>
                 </div>
             </div>
 
+            <!--SECTION 3 Tabs-->
+            <div class="card">
+                <div id="tabs">
+                    <button class="tab card_item btn" onclick="openTab('1')">More Info</button>
+                    <button class="tab card_item btn" onclick="openTab('2')">
+                        Average Donation
+                    </button>
+                    <button class="tab card_item btn" onclick="openTab('3')">
+                        Highest Donation
+                    </button>
+                </div>
+                <div class="tab-body panel show" id="tab1">
+                    <p>
+                        Join the <span class="donorCount">26</span> donors who have already supported this
+                        project.Every dollar helps!
+                    </p>
+                </div>
+                <div class="tab-body panel" id="tab2">
+                    <p>
+                        Average Donation is $35
+                    </p>
+                </div>
+                <div class="tab-body panel" id="tab3">
+                    <p>
+                        Highest Donation is $24
+                    </p>
+                </div>
+            </div>
             <!--Confirm Modal-->
             <div id="confirm-modal" class="modal-window">
                 <div>
@@ -95,5 +123,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="./assets/js/donate.js"></script>
         <script src="./assets/js/accordion.js"></script>
+        <script src="./assets/js/tabs.js"></script>
     </body>
 </html>

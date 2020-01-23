@@ -1,5 +1,5 @@
 var acc = document.getElementsByClassName("accordion");
-var panel = document.getElementsByClassName('panel');
+var panel = document.getElementsByClassName('pan-acc');
 var i;
 
 for (i = 0; i < acc.length; i++) {
