@@ -19,7 +19,7 @@ function getTemperature(cityName) {
             cityTag.innerHTML = cityName;
             // Set the Temperature
             const tempTag = document.getElementById("temperature");
-            tempTag.innerHTML = data.main.temp;
+            tempTag.innerHTML = data.main.temp + ' &deg F';
 
             //Show Weather Card
             const weatherCard = document.getElementById("weather");
