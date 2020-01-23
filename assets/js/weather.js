@@ -1,6 +1,6 @@
 function getTemperature(cityName) {
     $.ajax({
-        url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial`,
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial`,
         type: 'GET',
         dataType: 'JSON',
         data: {
