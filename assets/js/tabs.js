@@ -11,5 +11,4 @@ function openTab(tabNumber, buttonId) {
     button.classList.add('active');
     const element = document.getElementById(`tab${tabNumber}`);
     element.classList.add("show");
-    console.log(element.classList);
 }
