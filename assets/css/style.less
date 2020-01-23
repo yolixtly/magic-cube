@@ -236,16 +236,26 @@ progress::-moz-progress-bar {
     color: @gray-light;
 }
 
-.panel {
+div.panel {
     padding: 0 1rem;
     display: none;
     background-color: white;
     overflow: hidden;
 }
 
-.footer {
-    flex-shrink: 0;
+div.panel.show {
+    display: block !important;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // color: white;
+    text-align: center;
+}
+
 .flex-container {
     display: -webkit-box;
     display: -moz-box;
