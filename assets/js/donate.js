@@ -3,7 +3,8 @@ $("document").ready(() => {
     let donationState = {
         raised: 450,
         target: 600,
-        donors: 26
+        donors: 26,
+        init: true
     };
 
     // Update Progress Bar(s)
@@ -11,12 +12,25 @@ $("document").ready(() => {
         // Update Donation State
         donationState = Object.assign(donationState, { raised });
 
-        let progress = (raised / donationState.target) * 100;
+        const { target, init, donors } = donationState;
+        let progress = (raised / target) * 100;
 
         // Set Initial Value of the progress bar
         $('#progBar').val(raised);
         // Backwards Compatible with older browsers that do not support the progress tag
         $('div.progress-bar > span').css('width', `${progress}%`);
+
+        // Update Donor Count
+        const updateDonors = init ? donors : donors + 1;
+        $('#donorCount').text(() => {
+            return updateDonors;
+        });
+        donationState = Object.assign(
+            donationState,
+            {
+                donors: updateDonors,
+                init: false
+            });
     };
 
     // Initialize the Max value for the progress bar
@@ -50,12 +64,14 @@ $("document").ready(() => {
     $('#confirm-donation').click(() => {
         const amount = $('#amount').val();
         const updateRaised = JSON.parse(donationState.raised) + JSON.parse(amount);
+
         updateProgress(updateRaised);
 
-        //@TODO: Display Amount left to complete Raise
+        // Display Amount left to complete Raise
         $('span.tool').addClass('show');
-        //@TODO: Display toast message to confirm donation was done
+        // Display toast message to confirm donation was done
         $('#toast').addClass("show");
+
         setTimeout(() => {
             $('span.tool').removeClass('show');
             $('#toast').removeClass('show');

@@ -12,6 +12,8 @@
         <div class="content">
             <header>Magic Cube</header>
             <hr />
+
+            <!--SECTION 1- FORM-->
             <div class="card">
                 <div class="card__image card__image--logo"></div>
                 <div class="card__title"><span>Only 5 days left</span> to fund this project</div>
@@ -32,6 +34,16 @@
                         <input id="amount" class="card_item" type="number" placeholder="$" />
                         <a id="donate" class="card_item btn" href="#">Donate Now</a>
                     </div>
+                </div>
+            </div>
+
+            <!--SECTION 2 Accordion-->
+            <div class="card">
+                <button class="accordion">More Info</button>
+                <div class="panel">
+                    <p>
+                        Join the <span id="donorCount">26</span> donors who have already supported this project.Every dollar helps!
+                    </p>
                 </div>
             </div>
 
@@ -67,5 +79,6 @@
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="./assets/js/donate.js"></script>
+        <script src="./assets/js/accordion.js"></script>
     </body>
 </html>

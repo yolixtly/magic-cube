@@ -34,10 +34,6 @@ header {
     text-align: center;
 }
 
-.content {
-    flex: 1 0 auto;
-}
-
 .card {
     @media (max-width: 768px) {
         width: 75%;
@@ -48,7 +44,7 @@ header {
     @media (min-width: 959px) {
         width: 40%;
     }
-    margin: auto;
+    margin: 0 auto 1rem;
 
     background-color: white;
     border-radius: 0.25rem;
@@ -151,7 +147,7 @@ progress {
 }
 progress::-webkit-progress-bar {
     border: 1px solid @gray-light;
-    background-color: white;
+    background-color: whitesmoke;
 }
 progress::-webkit-progress-value {
     background: @highlight;
@@ -214,6 +210,36 @@ progress::-moz-progress-bar {
     // span.show:focus::before {
     //     transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
     // }
+}
+
+#accordion-wrapper {
+    padding-top: 1rem;
+}
+.accordion {
+    background-color: @gray-light;
+    color: @gray-darker;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: @gray-dark;
+    color: @gray-light;
+}
+
+.panel {
+    padding: 0 1rem;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }
 
 .footer {
