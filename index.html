@@ -42,8 +42,8 @@
                 <button class="accordion">More Info</button>
                 <div class="panel pan-acc">
                     <p>
-                        Join the <span class="donorCount">26</span> donors who have already supported this
-                        project.Every dollar helps!
+                        Join the <span class="donorCount strong">26</span> donors who have already supported
+                        this project.Every dollar helps!
                     </p>
                 </div>
 
@@ -75,8 +75,8 @@
                 </div>
                 <div class="tab-body panel show" id="tab1">
                     <p>
-                        Join the <span class="donorCount">26</span> donors who have already supported this
-                        project.Every dollar helps!
+                        Join the <span class="donorCount strong">26</span> donors who have already supported
+                        this project.Every dollar helps!
                     </p>
                 </div>
                 <div class="tab-body panel" id="tab2">
@@ -88,6 +88,17 @@
                     <p>
                         Highest Donation is $24
                     </p>
+                </div>
+            </div>
+
+            <!--SECTION 4 WEATHER-->
+            <div class="card">
+                <div id="weather-placeholder" class="card-body">
+                    <h4>Click the Cities below for Current Temperature</h4>
+                </div>
+                <div id="weather" class="card-body">
+                    <h4>Current Weather in <span id="cityName">Orlando</span> is:</h4>
+                    <h1 id="temperature">51.2 F</h1>
                 </div>
             </div>
             <!--Confirm Modal-->
@@ -115,13 +126,14 @@
         </div>
         <footer class="footer">
             <ul class="flex-container">
-                <li class="flex-item">Orlando Weather</li>
-                <li class="flex-item">Denver Weather</li>
+                <li class="flex-item card_item" onclick="getTemperature('Orlando')">Orlando Weather</li>
+                <li class="flex-item card_item" onclick="getTemperature('Denver')">Denver Weather</li>
             </ul>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="./assets/js/donate.js"></script>
         <script src="./assets/js/accordion.js"></script>
         <script src="./assets/js/tabs.js"></script>
+        <script src="./assets/js/weather.js"></script>
     </body>
 </html>
