@@ -53,11 +53,12 @@ $("document").ready(() => {
         updateProgress(updateRaised);
 
         //@TODO: Display Amount left to complete Raise
+        $('span.tool').addClass('show');
         //@TODO: Display toast message to confirm donation was done
-        $("#toast").addClass("show");
-
+        $('#toast').addClass("show");
         setTimeout(() => {
-            $("#toast").removeClass("show");
+            $('span.tool').removeClass('show');
+            $('#toast').removeClass('show');
         }, 2000);
 
     });
