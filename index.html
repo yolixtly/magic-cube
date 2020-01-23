@@ -65,11 +65,13 @@
             <!--SECTION 3 Tabs-->
             <div class="card">
                 <div id="tabs">
-                    <button class="tab card_item btn" onclick="openTab('1')">More Info</button>
-                    <button class="tab card_item btn" onclick="openTab('2')">
+                    <button class="tab card_item btn active" id="button1" onclick="openTab('1', 'button1')">
+                        More Info
+                    </button>
+                    <button class="tab card_item btn" id="button2" onclick="openTab('2', 'button2')">
                         Average Donation
                     </button>
-                    <button class="tab card_item btn" onclick="openTab('3')">
+                    <button class="tab card_item btn" id="button3" onclick="openTab('3', 'button3')">
                         Highest Donation
                     </button>
                 </div>
