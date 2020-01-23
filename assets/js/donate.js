@@ -52,6 +52,14 @@ $("document").ready(() => {
         const updateRaised = JSON.parse(donationState.raised) + JSON.parse(amount);
         updateProgress(updateRaised);
 
+        //@TODO: Display Amount left to complete Raise
+        //@TODO: Display toast message to confirm donation was done
+        $("#toast").addClass("show");
+
+        setTimeout(() => {
+            $("#toast").removeClass("show");
+        }, 2000);
+
     });
 
     // on Invalid Modal Close: Set Focus and highlight on Amount Input
