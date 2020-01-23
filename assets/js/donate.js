@@ -75,6 +75,17 @@ $("document").ready(() => {
         // Display toast message to confirm donation was done
         $('#toast').addClass("show");
 
+        // Set the corrent Amount left to Target
+        const leftToTarget = JSON.stringify(donationState.target - updateRaised);
+        console.log('left', leftToTarget)
+        $('span.leftToTarget').text(() => {
+            if (leftToTarget && leftToTarget > 0) {
+                return `$${leftToTarget} needed to complete Funding`;
+            } else {
+                return 'We have completed the Funding!'
+            }
+        });;
+
         setTimeout(() => {
             $('span.tool').removeClass('show');
             $('#toast').removeClass('show');
