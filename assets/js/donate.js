@@ -77,7 +77,6 @@ $("document").ready(() => {
 
         // Set the corrent Amount left to Target
         const leftToTarget = JSON.stringify(donationState.target - updateRaised);
-        console.log('left', leftToTarget)
         $('span.leftToTarget').text(() => {
             if (leftToTarget && leftToTarget > 0) {
                 return `$${leftToTarget} needed to complete Funding`;
